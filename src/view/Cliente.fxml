@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController">
+  <tabs>
+    <Tab text="Clientes">
+      <content>
+        <AnchorPane fx:id="tela_clientes" minHeight="0.0" minWidth="0.0" prefHeight="602.0" prefWidth="745.0">
+               <children>
+                  <ImageView fitHeight="160.0" fitWidth="158.0" layoutX="630.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Pictures/imagens/icone_principal_lilas-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnCadastrar" layoutX="67.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoCadastrar" prefHeight="33.0" prefWidth="100.0" text="Cadastrar" />
+                  <TextField fx:id="txtNome" layoutX="34.0" layoutY="91.0" prefHeight="25.0" prefWidth="167.0" />
+                  <TextField fx:id="txtEmail" layoutX="227.0" layoutY="91.0" prefHeight="25.0" prefWidth="169.0" />
+                  <TextField fx:id="txtCpf" layoutX="33.0" layoutY="146.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Label layoutX="32.0" layoutY="65.0" text="Nome" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="65.0" text="E-Mail" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="121.0" text="CPF" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="181.0" text="CEP" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="180.0" text="Endereço" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnAtualizar" layoutX="224.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoAtualizar" prefHeight="33.0" prefWidth="100.0" text="Atualizar" />
+                  <Button fx:id="btnExcluir" layoutX="384.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoExcluir" prefHeight="33.0" prefWidth="100.0" text="Excluir" />
+                  <Button fx:id="btnBuscar" layoutX="531.0" layoutY="330.0" mnemonicParsing="false" onAction="#AcaoBuscar" prefHeight="33.0" prefWidth="100.0" text="Buscar" />
+                  <TextField fx:id="txtContato" layoutX="226.0" layoutY="147.0" prefHeight="25.0" prefWidth="169.0" />
+                  <TableView fx:id="tableview_clientes" layoutX="7.0" layoutY="388.0" prefHeight="200.0" prefWidth="802.0">
+                    <columns>
+                        <TableColumn fx:id="codigo" prefWidth="64.0" text="Código" />
+                      <TableColumn fx:id="nome" prefWidth="134.0" text="Nome" />
+                        <TableColumn fx:id="cpf" prefWidth="137.0" text="CPF" />
+                      <TableColumn fx:id="email" prefWidth="122.0" text="Email" />
+                        <TableColumn fx:id="contato" prefWidth="101.0" text="Contato" />
+                        <TableColumn fx:id="endereco" prefWidth="135.0" text="Endereço" />
+                        <TableColumn fx:id="cep" prefWidth="121.0" text="CEP" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="226.0" layoutY="121.0" text="Contato" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCEP" layoutX="32.0" layoutY="203.0" prefHeight="25.0" prefWidth="168.0" />
+                  <TextField fx:id="txtEndereco" layoutX="225.0" layoutY="204.0" prefHeight="25.0" prefWidth="169.0" />
+                  <TextField fx:id="txtCodigo" layoutX="424.0" layoutY="88.0" prefHeight="25.0" prefWidth="167.0" />
+                  <Label layoutX="422.0" layoutY="62.0" text="Código" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnListarTodos" layoutX="659.0" layoutY="330.0" mnemonicParsing="false" onAction="#AcaoListartodos" prefHeight="33.0" prefWidth="100.0" text="Listar Todos" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+      <Tab text="Produtos">
+         <content>
+            <AnchorPane fx:id="tela_produtos" minHeight="0.0" minWidth="0.0" prefHeight="602.0" prefWidth="814.0">
+               <children>
+                  <ImageView fitHeight="128.0" fitWidth="162.0" layoutX="616.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Pictures/imagens/icone_principal_lilas-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnCadastrar1" layoutX="67.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoCadastrarProduto" prefHeight="33.0" prefWidth="100.0" text="Cadastrar" />
+                  <TextField fx:id="txtCodigoProduto" layoutX="34.0" layoutY="91.0" prefHeight="25.0" prefWidth="167.0" />
+                  <TextField fx:id="txtNomeProduto" layoutX="227.0" layoutY="91.0" prefHeight="25.0" prefWidth="169.0" />
+                  <TextField fx:id="txtMarca" layoutX="33.0" layoutY="146.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Label layoutX="32.0" layoutY="65.0" text="Código" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="65.0" text="Nome" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="121.0" text="Marca" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnAtualizar1" layoutX="224.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoAtualizarProduto" prefHeight="33.0" prefWidth="100.0" text="Atualizar" />
+                  <Button fx:id="btnExcluir1" layoutX="384.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoExcluirProduto" prefHeight="33.0" prefWidth="100.0" text="Excluir" />
+                  <Button fx:id="btnBuscar1" layoutX="531.0" layoutY="330.0" mnemonicParsing="false" onAction="#AcaoBuscarProduto" prefHeight="33.0" prefWidth="100.0" text="Buscar" />
+                  <TextField fx:id="txtValor" layoutX="226.0" layoutY="147.0" prefHeight="25.0" prefWidth="169.0" />
+                  <TableView fx:id="tableview_produtos" layoutX="25.0" layoutY="388.0" prefHeight="200.0" prefWidth="781.0">
+                     <columns>
+                        <TableColumn fx:id="codigoProduto" prefWidth="72.0" text="Código" />
+                        <TableColumn fx:id="nomeProduto" prefWidth="79.0" text="Nome" />
+                        <TableColumn fx:id="modeloProduto" prefWidth="76.0" text="Modelo" />
+                        <TableColumn fx:id="marcaProduto" prefWidth="96.0" text="Marca" />
+                        <TableColumn fx:id="valorProduto" prefWidth="84.0" text="Valor" />
+                        <TableColumn fx:id="unidadeProduto" prefWidth="97.0" text="Unidade" />
+                        <TableColumn fx:id="pesoProduto" prefWidth="83.0" text="Peso" />
+                        <TableColumn fx:id="tamanhoProduto" prefWidth="101.0" text="Tamanho" />
+                        <TableColumn fx:id="numeracaoProduto" prefWidth="101.0" text="Numeração" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="226.0" layoutY="121.0" text="Valor" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtModelo" layoutX="413.0" layoutY="93.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Label layoutX="414.0" layoutY="68.0" text="Modelo" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtUnidade" layoutX="413.0" layoutY="146.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Label layoutX="414.0" layoutY="121.0" text="Unidade" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="230.0" layoutY="180.0" text="Tamanho" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtTamanho" layoutX="228.0" layoutY="202.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Label layoutX="415.0" layoutY="180.0" text="Numeração" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtNumeracao" layoutX="413.0" layoutY="202.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Button fx:id="btnListar1" layoutX="660.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoBuscarListarProduto" prefHeight="33.0" prefWidth="100.0" text="Listar" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+      <Tab text="Pedidos">
+         <content>
+            <AnchorPane fx:id="tela_produtos1" minHeight="0.0" minWidth="0.0" prefHeight="602.0" prefWidth="814.0">
+               <children>
+                  <ImageView fitHeight="128.0" fitWidth="162.0" layoutX="616.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../Pictures/imagens/icone_principal_lilas-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnCadastrarPedido" layoutX="67.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoCadastrarPedido" prefHeight="33.0" prefWidth="100.0" text="Cadastrar" />
+                  <TextField fx:id="txtCodigoPedido" layoutX="34.0" layoutY="91.0" prefHeight="25.0" prefWidth="167.0" />
+                  <TextField fx:id="txtCodigoCliente" layoutX="227.0" layoutY="91.0" prefHeight="25.0" prefWidth="169.0" />
+                  <Label layoutX="32.0" layoutY="65.0" text="Código" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="227.0" layoutY="65.0" text="Código Cliente" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnAtualizarPedido" layoutX="224.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoAtualizarPedido" prefHeight="33.0" prefWidth="100.0" text="Atualizar" />
+                  <Button fx:id="btnExcluirPedido" layoutX="372.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoExcluirPedido" prefHeight="33.0" prefWidth="100.0" text="Excluir" />
+                  <Button fx:id="btnBuscarPedido" layoutX="531.0" layoutY="330.0" mnemonicParsing="false" onAction="#AcaoBuscarPedido" prefHeight="33.0" prefWidth="100.0" text="Buscar" />
+                  <TextField fx:id="txtCodigoProduto1" layoutX="413.0" layoutY="88.0" prefHeight="25.0" prefWidth="169.0" />
+                  <TableView fx:id="tableview_pedidos" layoutX="25.0" layoutY="388.0" prefHeight="200.0" prefWidth="781.0">
+                     <columns>
+                        <TableColumn fx:id="codigopedido" prefWidth="72.0" text="Código" />
+                        <TableColumn fx:id="codigocliente" prefWidth="76.0" text="Cliente" />
+                        <TableColumn fx:id="codigoproduto" prefWidth="96.0" text="Produto" />
+                        <TableColumn fx:id="valorpedido" prefWidth="84.0" text="Valor" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="413.0" layoutY="62.0" text="Código Produto" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="36.0" layoutY="154.0" text="Valor do Pedido" textFill="#000000e5">
+                     <font>
+                        <Font name="Arial Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtValorPedido" layoutX="34.0" layoutY="176.0" prefHeight="25.0" prefWidth="168.0" />
+                  <Button fx:id="btnListarPedidos" layoutX="660.0" layoutY="330.0" mnemonicParsing="false" onAction="#acaoBuscarListarPedidos" prefHeight="33.0" prefWidth="100.0" text="Listar" />
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+  </tabs>
+</TabPane>
